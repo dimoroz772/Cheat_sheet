@@ -1,1 +1,125 @@
-
+<head>
+    <title>VPN_WireGuard</title>
+    <link rel="shortcut icon" href="./cc.png" type="image/png">
+  </head>
+   <head>
+    <meta charset="utf-8">
+   </head>
+  <style>
+  .neonText1 {
+    color: #87CEFA;
+    text-shadow:
+        0 0 1px #4169E1,
+        0 0 1px #4169E1,
+        0 0 1px #4169E1,
+        0 0 1px #4169E1,
+        0 0 1px #4169E1,
+        0 0 1px #4169E1,
+        0 0 1px #4169E1,
+        0 0 1px #4169E1;
+  }
+  .neonText2 {
+    color: #00FF00;
+    text-shadow:
+        0 0 1px #006400,
+        0 0 1px #006400,
+        0 0 1px #006400,
+        0 0 1px #006400,
+        0 0 1px #006400,
+        0 0 1px #006400,
+        0 0 1px #006400,
+        0 0 1px #006400;
+  }
+  .neonText3 {
+    color: #ff0000;
+    text-shadow:
+        0 0 1px #640000,
+        0 0 1px #640000,
+        0 0 1px #640000,
+        0 0 1px #640000,
+        0 0 1px #640000,
+        0 0 1px #640000,
+        0 0 1px #640000,
+        0 0 1px #640000;
+  }
+  .neonText4 {
+    color: #ffffff;
+    text-shadow:
+        0 0 1px #c7c7c7,
+        0 0 1px #c7c7c7,
+        0 0 1px #c7c7c7,
+        0 0 1px #c7c7c7,
+        0 0 1px #c7c7c7,
+        0 0 1px #c7c7c7,
+        0 0 1px #c7c7c7,
+        0 0 1px #c7c7c7;
+  }
+  /* Additional styling */
+  body{
+      background-color: black;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #cfcfcf;
+  }
+  a {
+      text-decoration: none;
+  }
+  p {
+    text-indent: 1.5em;
+    font-family: monospace;
+    font-weight: 500;
+    white-space: pre;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+  </style>
+  <div class="container">
+  <p class="neonText1">
+    <a class="neonText4">RHEL</a>
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <a class="neonText2">7z x image.iso  -o/the/path/to/unpacking/the/iso/image/</a> |#|#| Команда для распаковки iso-образа "image.iso" в каталог "/the/path/to/unpacking/the/iso/image/".
+    <a class="neonText3">P.S. Между опцией "-o" и каталогом "/the/path/to/unpacking/the/iso/image/" не должно быть пробела.</a>
+    ------------
+    <a class="neonText2">eval "$(ssh-agent -s)"</a> |#|#| Запускает ssh-агента и настраивает переменные среды, используемые агентом.
+    <a class="neonText2">ssh-add /root/.ssh/key</a> |#|#| Добавляет SSH-ключ в запущенного ранее ssh-агента.
+    <a class="neonText3">P.S. Если вы выполняете данные команды на ВМ, к которой подключетесь по SSH, то после обрыва SSH-соединения с этой ВМ, вам нужно будет выполнить две выше
+    указанные команды заново.</a>
+    ------------
+    <a class="neonText2">wget -m -np -c -nH --cut-dirs=4 -R "index.html*" -P /var/www/html/Astra_Linux_Common_Edition/2.12.46/ --accept-regex=".*" --no-check-certificate http://dl.astralinux.ru/astra/frozen/2.12_x86-64/2.12.46/repository/</a>
+    ⇑⇑⇑|#|#|⇑⇑⇑
+    Данная команда рекурсивно скачивает содержимое каталога "http://dl.astralinux.ru/.../repository/" в локальный каталог "/var/www/html/Astra_Linux_Common_Edition/2.12.46/"
+    при этом убирает лишние уровни директорий и не скачивает index.html файлы.
+    ------------
+    <a class="neonText2">ssh-keygen -t ed25519</a> |#|#| Данная команда используется для создания новой пары SSH-ключей(приватный и публичный), используя алгоритм Ed25519.
+    ------------
+    <a class="neonText2">xfreerdp /v:192.168.50.14 /u:user /p:P@ssw0rD /size:97%h</a> |#|#| Данная команда используется для подключения из под ОС Linux к удаленному рабочему столу.
+    ------------
+    <a class="neonText2">mount -t cifs //10.10.10.10/Downloads /mnt -o username=Администратор,password=P@ssw0rD,vers=2.1</a> |#|#| Данная команда подключает сетевую папку(Windows-сервер / Samba)
+    к локальному каталогу Linux как обычную файловую систему.
+    <a class="neonText3">P.S. Данная сетевая папка будет работать только до перезагрузки ОС.</a>
+    ------------
+    <a class="neonText2">ssh-keygen -R 10.10.10.10</a> |#|#| Команда для сброса ключа авторизации.
+    ------------
+    <a class="neonText2">ip route</a> |#|#| Команда для показа шлюза по умолчанию
+    ------------
+    <a class="neonText2">cat /etc/resolv.conf</a> |#|#| Команда для поиска DNS-серверов
+    ------------
+    ARP-таблица.
+    <a class="neonText2">ping 10.10.10.10</a> |#|#| ОС делает ARP-запрос, чтобы узнать MAC-адрес устройства, и добавляет его в ARP-таблицу.
+    <a class="neonText2">arp -a 10.10.10.10</a> |#|#| Данная команда позволяет узнать, какой MAC-адрес у устройства с IP 10.10.10.10, если оно есть в ARP-таблице.
+    <a class="neonText3">Пример вывода: "? (10.10.10.10) at 00:1A:2B:3C:4D:5E [ether] on eth0"</a>
+    ------------
+    <a class="neonText2">dnf autoremove</a> |#|#| Команда для удаления пакетов, которые больше не нужны системе.
+    ------------
+    <a class="neonText4">Multimedia</a>
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <a class="neonText2">rtsp://Admin:P@ssw0rD@10.10.10.10:554/snl/live/1/1</a> |#|#|\
+                                                       |#|#| — RTSP-URL — адрес потока видеонаблюдения или IP-камеры для транслирования изображения с помощью видеоплеера или ПО.
+    <a class="neonText2">rtsp://admin:admin@10.10.10.11:554/ch01/0</a>          |#|#|/
+    ------------
+  </p>
+  </div>
