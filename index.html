@@ -129,5 +129,12 @@
                                                        |#|#| — RTSP-URL — адрес потока видеонаблюдения или IP-камеры для транслирования изображения с помощью видеоплеера или ПО.
     <a class="neonText2">rtsp://admin:admin@10.10.10.11:554/ch01/0</a>          |#|#|/
     ------------
+    <a class="neonText4">Zabbix-tuning</a>
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <a class="neonText3">При появлении ошибки "Zabbix server: More than 100 items having missing data for more than 10 minutes".</a>
+    <a class="neonText2">nano /etc/zabbix/zabbix_server.conf</a>
+    <a class="neonText3">P.S. Найти и раскомментировать строки(# StartPollers=5 и # StartPollersUnreachable=1). После чего заменить стандартные значения на StartPollers=20,
+    StartPollersUnreachable=5. ВАЖНО! При увеличении лимитов, соответственно будут нужны дополнительные ресурсы.</a>
+    <a class="neonText2">systemctl restart zabbix-server |#|#| Команда для перезапуска Zabbix-server-а.</a>
   </p>
   </div>
